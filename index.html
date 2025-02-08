@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Powercast.ai</title>
+        <title>powercast.ai</title>
         <link rel="stylesheet" href="style.css">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <div class="header-left"> 
-                    <img src="pics/logo_white-23.png" class="logo_header">                   
+                    <img src="pics/logo_sky_blue.png" class="logo_header">                   
                 </div>
                 <div class="header-right">
-                    <div class="nav"> API
-                    </div>
                     <div class="nav" onclick="scrollToSection()">Contact</div>
                 </div>
             </div>
@@ -26,7 +24,7 @@
                     ">
                     <p class="h1-title-front">Empowering Analysts and Traders through <span style="color: #68C6E0;">AI</span></p>
                     <p class="h2-subtitle-front">Demand &#47&#47 Embedded Solar &#47&#47 Embedded Wind</p>
-                    <div class="access-data">Access Data &#62&#62&#62</div>
+                    <div class="access-data" onclick="scrollToSection()">Access Data &#62&#62&#62</div>
                 </div>
             </div>
         </div>
@@ -79,10 +77,14 @@
                     <p class="h2-subtitle">we apply the latest machine learning techniques to data based on deep fundamental insights and an obsession with data quality. We take advantage of cloud-enabled technology to compute, store and automate our processes, and provide a seamless user experience through an intuitive API.</p>
                 </div>
                 <div class="to-achive-cards">
-                    <div class="card">State-of-the-art AI and machine learning</div>
-                    <div class="card">Data quality and fundamental insights</div>
-                    <div class="card">Cloud-based automation</div>
-                    <div class="card">Easy data integration</div>
+                    <div class="card"
+                        data-hover="We utilize the latest research and methodologies within deep learning and artificial neural networks to connect datapoints and capture complex non-linear relationships. We operate multiple internal algorithms which compete to produce the most accurate forecasts and constantly retrain and recalibrate our models to reflect the most recent developments in the electricity system.">State-of-the-art AI and machine learning</div>
+                    <div class="card"
+                        data-hover="Our models ingest data from multiple sources. Selection of data sources and parameters requires deep domain knowledge and we take great pride, and effort, in ensuring the highest levels of data quality.">Data quality and fundamental insights</div>
+                    <div class="card"
+                    data-hover="Our cloud-first approach enables us to organize our data in a secure and flexible manner. We automate processes and continuously monitor systems and dataflows to ensure maximum up-time and output reliability.">Cloud-based automation</div>
+                    <div class="card"
+                        data-hover="We want integration to be easy. Most often, this is through a direct API, but if you prefer any other delivery method, just let us know and we can set this up for you.">Easy data integration</div>
                 </div>
                 <div class="photo-achieve">
                 </div>
@@ -117,22 +119,32 @@
         </section>
         <section id="Contact">
             <div id="Contact" class="contact-us">
-                <div class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <p class="h1-title">Contact us</p>
                     <p class="normal-text-skyblue">The best way to evaluate performance is usually to just start receiving the live data. So, reach out to us and we will provide you with an API key. If you have any other questions or are looking for specific historic data, get in touch as well. As you prefer. Simple, and at no cost to you.</p>
-                    <input class="field-short" type="text" placeholder="Name">
-                    <input class="field-short" type="text" placeholder="Company">
-                    <input class="field-short" type="text" placeholder="Email"> 
-                    <input class="field-hight" type="text" placeholder="Message">
-                    <div class="access-data">Send &#62&#62&#62</div>
-                </div>
+                    <input type="hidden" name="access_key" value="195c1e5a-ece4-4946-bf5c-953aed5bcc30">
+                    <input type="text" name="Name" placeholder="Your name" class="field-short" required>
+                    <input type="text" name="Company" placeholder="Company" class="field-short" >
+                    <input type="email" name="Email" placeholder="Email" class="field-short" required> 
+                    <textarea name="Message" placeholder="Message" class="field-high" required></textarea>
+                    <button class="send-button">Send &#62&#62&#62</button>
+                </form>
                 <div class="contact-own">
-                    <div class="logo_long"></div>
-                    <p class="tel-mail"></p>
-                    <p class="tel-mail"></p>
+                    <div style="flex: 1;"></div>
+                    <img src="pics/logo_long_darkblue-64.png" class="logo-long">
+                    <p class="tel-mail">info@powercast.ai</p>
+                    <p class="tel-mail">+44 (0) 7748646622</p>
+                    <a href="https://uk.linkedin.com/company/powercastai" target="_blank">
+                        <img src="pics/LinkedIn_icon.svg.png" class="In">
+                    </a>
                 </div>
             </div>
         </section>
+        <section id="footer">
+            <hr color="#68C6E0"/>
+            <div class="footer">Copyright &#169; 2025 powercast.ai</div>
+        </section>
+
         <script>
             function scrollToSection() {
                 document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
